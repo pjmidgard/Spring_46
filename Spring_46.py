@@ -63,7 +63,7 @@ wer=""
 qtqweqw=""
 numberschangenotexist = []
 numbers = []
-namez = input("c,c2, ul2 or for compress cl for extract for u2,e, cl2? ")
+namez = input("c, ul2 or for compress cl for extract for e, cl2? ")
 
 #@Author Jurijus pacalovas
 class compression:
@@ -864,7 +864,9 @@ class compression:
                                                                 
                                                
                                             szx=""
+                                            #print(count_times4)
                                             szx1=bin(count_times4)[2:]
+                                            #print(szx1)
                                             lenf=len(szx1)
                                             #print(lenf)
 
@@ -880,6 +882,7 @@ class compression:
                                                         z=z+1
                                         
                                             sda14=szx+szx1
+                                            #print(sda14)
 
                                           
                                             szx1=bin(lenf2)[2:]
@@ -900,6 +903,7 @@ class compression:
                                             sda15=szx+szx1
 
                                             wer=sda15+sda14
+                                            
 
                                             n = int(wer, 2)
                                             qqwslenf=len(wer)
