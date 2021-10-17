@@ -479,12 +479,13 @@ class compression:
                    
                        
                         lenf1=len(data)
-                        lenf5=len(data)
+                        lenf7=len(data)
                         
                         END_working=0
                         Circle_times=0
                         Circle_times2=0
                         ii=0
+                        sda20=""
                         
                         while END_working<10:
                        
@@ -542,7 +543,7 @@ class compression:
                                 lenf2=len(sda2)
                                 #print(lenf2)
                                 if i==1:
-                                    if lenf2>=(2**32)-1:
+                                    if lenf7>=(2**32)-1:
                                         raise SystemExit
                                         
                                         
@@ -554,8 +555,13 @@ class compression:
                                 
                                 block2=0
                                 if i==2:
+
+                                    
                                     
                                     lenf5=len(sda2)
+
+                                    
+                                    
                                         
                                     block2=0
                                     ei4=0
@@ -619,7 +625,11 @@ class compression:
                                     Bytes_row4=""
                                     ei=0
 
+                                    
+
                                     while ei<lenf6:
+
+                                        
 
                                         sda7=sda3[ei:ei+1]
 
@@ -691,7 +701,7 @@ class compression:
                                     Circle_times=Circle_times+1
                                     szxzzza=""
                                     szxzs=""
-                                    sda2=sda6
+                                    
                                                         
                                     Circle_times2=Circle_times2+1
 
@@ -730,6 +740,9 @@ class compression:
 
                                     ei=0
                                     
+                                    if Circle_times2>=1:
+
+                                        sda2=sda20
                                     
 
                                     while ei<lenf6:
@@ -768,7 +781,7 @@ class compression:
 
                                             sda4=sda4+sda10+sda12+sda13+sda11
                                             
-                                        #print(sda4)
+                                        
 
 
                                         
@@ -790,7 +803,7 @@ class compression:
                                     sda5=""
                                      
                                     
-                                    
+                                    sda20=sda6
 
                                     Spin=0   
 
@@ -804,17 +817,18 @@ class compression:
                                     
                                         Circle_times=Circle_times+1
                                         
-                                        sda2=sda6
+                                       
                                                         
                                         Circle_times2=Circle_times2+1
-
+                                        
                                         
 
                                     
-                                        if Circle_times2==lenf2*200:
+                                        if Circle_times2==lenf7*20*8:
+                                            
 
                                             Spin=0
-                                            sda3=sda2
+                                            sda3=sda20
                                             lenf6=len(sda3)
                                             ei4=0
                                             ei5=20
@@ -842,7 +856,7 @@ class compression:
                                             count_times4=0
                                             while ei<lenf6:
 
-                                                sda9=sda2[ei:ei+1]
+                                                sda9=sda3[ei:ei+1]
                                                 
 
                                                 ei=ei+1
@@ -860,6 +874,8 @@ class compression:
 
                                                 else:
                                                     raise SystemExit
+
+                                                
                                                     
                                                                 
                                                
@@ -885,7 +901,7 @@ class compression:
                                             #print(sda14)
 
                                           
-                                            szx1=bin(lenf2)[2:]
+                                            szx1=bin(lenf7)[2:]
                                             lenf=len(szx1)
                                             #print(lenf)
 
