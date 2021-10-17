@@ -743,17 +743,17 @@ class compression:
                                     if Circle_times2>=1:
 
                                         sda2=sda20
-                                    
+
+                                    count_times4=0
 
                                     while ei<lenf6:
 
-                                        sda9=sda2[0:16]
-                                        sda10=sda2[ei:ei+3][::-1]
-                                        sda11=sda2[ei:ei+4]
-                                        sda12=sda2[ei:ei+5]
-                                        sda13=sda2[ei:ei+4][::-1]
+                                        sda9=sda2[0:2]
+                                        sda10=sda2[ei:ei+1][::-1]
+                                        sda11=sda2[ei:ei+1]
+                                       
 
-                                        ei=ei+16
+                                        ei=ei+2
 
                                         #Bytes_row1=int(sda9, 2)
 
@@ -774,15 +774,17 @@ class compression:
 
                                        
 
-                                        if sda9=="1111111111111111":
+                                        if sda9=="11":
                                             sda4=sda4+"2"
+                                            count_times4=count_times4+1
                                                         
                                         else:
 
-                                            sda4=sda4+sda10+sda12+sda13+sda11
+                                            sda4=sda4+sda10+sda11
                                             
                                         
 
+                                                
 
                                         
                                     #print(ei)
@@ -812,7 +814,7 @@ class compression:
                                         wer=sda6
                                         sda4=""
                                         szx=""
-                                        count_times4=""
+                                        
                                         
                                     
                                         Circle_times=Circle_times+1
@@ -821,64 +823,10 @@ class compression:
                                                         
                                         Circle_times2=Circle_times2+1
                                         
-                                        
-
                                     
-                                        if Circle_times2==lenf7*20*8:
+                                        if  count_times4==lenf7*4:
                                             
 
-                                            Spin=0
-                                            sda3=sda20
-                                            lenf6=len(sda3)
-                                            ei4=0
-                                            ei5=20
-                                            block3=0
-                                            Colaider3=""
-                                            block2=0
-                                            block3=0
-
-                                            szx=""
-
-                                            sda6=""
-
-                                            #Compression
-
-                                            sda9=""
-
-                                            sda10=""
-                                            sda11=""
-                                            sda12=""
-                                            sda13=""
-
-                                            ei=0
-                                    
-
-                                            count_times4=0
-                                            while ei<lenf6:
-
-                                                sda9=sda3[ei:ei+1]
-                                                
-
-                                                ei=ei+1
-
-                                            
-
-                                                count=0
-
-                                                szx=""
-                                               
-                                               
-
-                                                if sda9=="2":
-                                                    count_times4=count_times4+1
-
-                                                else:
-                                                    raise SystemExit
-
-                                                
-                                                    
-                                                                
-                                               
                                             szx=""
                                             #print(count_times4)
                                             szx1=bin(count_times4)[2:]
