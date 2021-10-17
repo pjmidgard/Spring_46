@@ -3,7 +3,7 @@ Spring_46
 
 Spring_44
 
-Speed: 100Bytes/s
+Speed: 1-20Bytes/s
 
 Developed: Jurijus Pacalovas.
 
