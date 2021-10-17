@@ -774,13 +774,13 @@ class compression:
 
                                        
 
-                                        if sda9=="1":
+                                        if sda9=="11":
                                             sda4=sda4+"2"
                                             count_times4=count_times4+1
                                                         
                                         else:
 
-                                            sda4=sda4+sda10+sda11
+                                            sda4=sda4+sda10
                                             
                                         
 
@@ -824,7 +824,7 @@ class compression:
                                         Circle_times2=Circle_times2+1
                                         
                                     
-                                        if  count_times4==lenf7*8:
+                                        if  count_times4==lenf7*4:
                                             
 
                                             szx=""
