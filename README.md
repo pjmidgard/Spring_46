@@ -13,6 +13,6 @@ Program compress not any files. I had read literature about compressions like RL
 
 Algorithm init:
 
-Mix and add 2.
+Mix, 2 and reverso
 
 Bye, bye.
