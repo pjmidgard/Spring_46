@@ -849,7 +849,7 @@ class compression:
                                             #print(sda14)
 
                                           
-                                            szx1=bin(lenf7)[2:]
+                                            szx1=bin(Circle_times2)[2:]
                                             lenf=len(szx1)
                                             #print(lenf)
 
