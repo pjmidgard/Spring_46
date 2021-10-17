@@ -750,7 +750,7 @@ class compression:
 
                                         sda9=sda2[0:2]
                                         sda10=sda2[ei:ei+1][::-1]
-                                        sda11=sda2[ei:ei+1]
+                                        sda11=sda2[ei+1:ei+2]
                                        
 
                                         ei=ei+2
