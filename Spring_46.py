@@ -735,10 +735,10 @@ class compression:
                                     while ei<lenf6:
 
                                         sda9=sda2[0:16]
-                                        sda10=sda2[ei:ei+3]
+                                        sda10=sda2[ei:ei+3][::-1]
                                         sda11=sda2[ei:ei+4]
                                         sda12=sda2[ei:ei+5]
-                                        sda13=sda2[ei:ei+4]
+                                        sda13=sda2[ei:ei+4][::-1]
 
                                         ei=ei+16
 
@@ -842,7 +842,7 @@ class compression:
                                             count_times4=0
                                             while ei<lenf6:
 
-                                                sda9=sda2[0:1]
+                                                sda9=sda2[ei:ei+1]
                                                 
 
                                                 ei=ei+1
