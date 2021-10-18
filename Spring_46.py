@@ -635,7 +635,7 @@ class compression:
 
                                     Circle_times2=Circle_times2+1
                                     
-                                    if  Circle_times2==lenf9:
+                                    if  Circle_times2==lenf9 and count_times4==0:
                                          #print(wer)
 
                                          n = int(wer, 2)
