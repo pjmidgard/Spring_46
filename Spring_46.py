@@ -578,40 +578,8 @@ class compression:
                                     #Extract
                                     g=1
                                     
-                                    if g==1:
+                                    s
 
-                                        if sda2[lenf5-8:lenf5]=="10000000":
-
-                                            sda2=sda2[:lenf5-8]
-
-                                        elif sda2[lenf5-7:lenf5]=="1000000":
-
-                                            sda2=sda2[:lenf5-7]
-
-                                        elif sda2[lenf5-6:lenf5]=="100000":
-
-                                            sda2=sda2[:lenf5-6]
-
-                                        elif sda2[lenf5-5:lenf5]=="10000":
-
-                                            sda2=sda2[:lenf5-5]
-
-
-                                        elif sda2[lenf5-3:lenf5]=="100":
-
-                                            sda2=sda2[:lenf5-3]
-
-                                        elif sda2[lenf5-2:lenf5]=="10":
-
-                                            sda2=sda2[:lenf5-2]
-
-                                        elif sda2[lenf5-1:lenf5]=="1":
-
-                                            sda2=sda2[:lenf5-1]
-
-
-
-                                    
                                     sda3=sda2
                                     lenf6=len(sda3)
                                     sda4=""
@@ -631,14 +599,19 @@ class compression:
                                     lenf8=int(lenf8b, 2)
 
                                     if Circle_times2==0:
+                                        ei=0
                                         while ei<lenf8:
                                             sda5=sda5+"2"
 
-                                        sda3=sda5
+                                            ei=ei+1
 
+                                        sda3=sda5
+                                    
                                     ei=0
 
-                                    while ei<lenf6:
+                                    count_times4=0
+
+                                    while ei<lenf8:
 
                                         sda9=sda3[0:1][::-1]
                                         sda10=sda3[ei:ei+1][::-1]
@@ -661,8 +634,9 @@ class compression:
                                     sda4=""
 
                                     Circle_times2=Circle_times2+1
-                          
-                                    if  Circle_times2>=lenf9 and count_times4==0:
+                                    
+                                    if  Circle_times2==lenf9:
+                                         #print(wer)
 
                                          n = int(wer, 2)
                                          qqwslenf=len(wer)
