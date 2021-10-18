@@ -611,7 +611,12 @@ class compression:
                                     while ei<lenf8:
 
                                         sda9=sda3[0:1][::-1]
-                                        sda10=sda3[ei:ei+1][::-1]
+
+                                        if ei==0:
+                                            sda10=sda3[ei:ei+1][::-1]
+
+                                        else:
+                                            sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
                                     
@@ -687,8 +692,14 @@ class compression:
                                     
                                     while ei<lenf6:
 
-                                        sda9=sda2[0:1][::-1]
-                                        sda10=sda2[ei:ei+1][::-1]
+                                        
+                                        sda9=sda3[0:1][::-1]
+
+                                        if ei==0:
+                                            sda10=sda3[ei:ei+1][::-1]
+
+                                        else:
+                                            sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
                                     
