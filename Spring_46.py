@@ -745,7 +745,7 @@ class compression:
                                         sda2=sda20
 
                                     count_times4=0
-                                    count_times5=0
+                                    
 
                                     while ei<lenf6:
 
@@ -762,7 +762,7 @@ class compression:
                                             sda4=sda4+"1"
                                                       
                                         else:
-                                            count_times5=count_times5+1
+                                           
                                             sda4=sda4+sda10
                                             
                                         
@@ -807,7 +807,7 @@ class compression:
                                         Circle_times2=Circle_times2+1
                                         
                                     
-                                        if  count_times4==lenf7*8 and count_times5==0:
+                                        if  count_times4==lenf7*8:
                                             
 
                                             szx=""
