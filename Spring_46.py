@@ -745,41 +745,24 @@ class compression:
                                         sda2=sda20
 
                                     count_times4=0
+                                    count_times5=0
 
                                     while ei<lenf6:
 
-                                        sda9=sda2[0:2][::-1]
-                                        sda10=sda2[ei:ei+2][::-1]
-                                        
+                                        sda9=sda2[0:1][::-1]
+                                        sda10=sda2[ei:ei+1][::-1]
                                        
-
-                                        ei=ei+2
-
-                                        #Bytes_row1=int(sda9, 2)
-
-                                        count=0
-
-                                   
-
-          
-
-
-                                        szx=""
-                                             
-
-                                        #Colaider3=bin(Bytes_row1)[2:]
-                                        #lenf=len(Colaider3)
-                                        #print(lenf)
-                                        
-
-                                       
-
-                                        if sda9=="11":
+                                        ei=ei+1
+                                    
+                                        if sda9=="1":
                                             sda4=sda4+"2"
                                             count_times4=count_times4+1
-                                                        
-                                        else:
 
+                                        elif sda9=="2":
+                                            sda4=sda4+"1"
+                                                      
+                                        else:
+                                            count_times5=count_times5+1
                                             sda4=sda4+sda10
                                             
                                         
@@ -824,7 +807,7 @@ class compression:
                                         Circle_times2=Circle_times2+1
                                         
                                     
-                                        if  count_times4==lenf7*4:
+                                        if  count_times4==lenf7*8 and count_times5==0:
                                             
 
                                             szx=""
@@ -898,5 +881,4 @@ d=compression()
 xw=d.cryptograpy_compression2()
 print(xw)
 
-xw2=d.cryptograpy_compression()
-print(xw2)
+xw=d.cryptograpy_compression()
