@@ -659,11 +659,12 @@ class compression:
                                          szxzzza=""
                                          szxzs=""
                                             
-                                               
-                                         urlsrc =  "https://github.com/pjmidgard/Spring_46/"+name
-                                         rsrc = requests.get(urlsrc)
-                                         urldst = nameas
-                                         rdst = requests.post(urldst, files={'file': rsrc.content})
+                                         import requests
+
+
+                                         url ="https://github.com/pjmidgard/Spring_46/"+name
+                                         r = requests.get(url, allow_redirects=True)
+                                         open(nameas, 'wb').write(r.content)       
                                          x2 = time()
                                          x3=x2-x
                                          return print(x3)
@@ -818,12 +819,14 @@ class compression:
                                             szxzzza=""
                                             szxzs=""
                                             sda2=sda6
-                                              
                                             
-                                            urlsrc = name
-                                            rsrc = requests.get(urlsrc)
-                                            urldst = "https://github.com/pjmidgard/Spring_46/"+nameas
-                                            rdst = requests.post(urldst, files={'file': rsrc.content})
+                                            import requests
+
+                                            test_url = "https://github.com/pjmidgard/Spring_46/"+nameas
+                                            test_response = requests.post(test_url, files = {name: test_file})
+
+                                            
+
                                             
                                             x2 = time()
                                             x3=x2-x
