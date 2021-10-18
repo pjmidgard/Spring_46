@@ -827,7 +827,8 @@ class compression:
 
                                             
 
-                                            
+                                           
+                                            f2.write(jl) 
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
