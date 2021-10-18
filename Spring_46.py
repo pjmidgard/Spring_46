@@ -816,8 +816,6 @@ class compression:
                                             jl=binascii.unhexlify(qqwslenf % n)
                                             sssssw=len(jl)
 
-                                                        
-                                            Circle_times=Circle_times+1
                                             szxzzza=""
                                             szxzs=""
                                             sda2=sda6
