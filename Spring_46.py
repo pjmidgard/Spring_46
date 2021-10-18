@@ -476,13 +476,10 @@ class compression:
       
                         s=str(data)
 
-                   
-                       
                         lenf1=len(data)
                         lenf7=len(data)
                         
                         END_working=0
-                        Circle_times=0
                         Circle_times2=0
                         ii=0
                         sda20=""
@@ -612,7 +609,8 @@ class compression:
 
                                             sda2=sda2[:lenf5-1]
 
-                                    
+
+
                                     
                                     sda3=sda2
                                     lenf6=len(sda3)
@@ -625,92 +623,62 @@ class compression:
                                     Bytes_row4=""
                                     ei=0
 
-                                    
+                                    lenf8a=sda3[0:48]
+                                    lenf8b=sda3[48:96]
+
+                                    lenf9=int(lenf8a, 2)
+
+                                    lenf8=int(lenf8b, 2)
+
+                                    if Circle_times2==0:
+                                        while ei<lenf8:
+                                            sda5=sda5+"2"
+
+                                        sda3=sda5
+
+                                    ei=0
 
                                     while ei<lenf6:
 
-                                        
-
-                                        sda7=sda3[ei:ei+1]
-
-                                        
-
-                                        if sda7=="0":
-                                            ei=ei+1
-
-                                            sda9=sda3[ei:ei+4]
-                                        
-                                            sda4=sda4+sda9
-                                            ei=ei+4
-
-                                        if sda7=="1":
+                                        sda9=sda3[0:1][::-1]
+                                        sda10=sda3[ei:ei+1][::-1]
+                                       
+                                        ei=ei+1
                                     
-                                            sda8=sda3[ei:ei+1]
-                                            ei=ei+1
+                                        if sda9=="1":
+                                            sda4=sda4+"2"
+                                            count_times4=count_times4+1
 
-                                            if sda8=="1":
-                                                sda5=sda3[ei:ei+2]
-                                                ei=ei+2
+                                        elif sda9=="2":
+                                            sda4=sda4+"1"
+                                                      
+                                        else:
+                                           
+                                            sda4=sda4+sda10
 
-                                                
-                                                Bytes_row4=int(sda5, 2)
-                                                #print(Bytes_row4)
+                                    sda2=sda4
+                                    wer=sda4
+                                    sda4=""
 
-                                                count=0
-
-                                                u=0
-                                                code=256
-
-
-
-                                                szx=""
-                                                szx1=""
-                                              
-                                                szx1=bin(Bytes_row4)[2:]
-                                                lenf=len(szx1)
-                                                #print(lenf)
-                                                
-                                                #print(lenf)
-                                                xc=4-lenf%4
-                                                z=0
-                                                if xc!=0:
-                                                     if xc!=4:
-                                                           while z<xc:
-                                                                szx="0"+szx
-                                                                z=z+1
-                                        
-                                                sda4=sda4+szx+szx1
-
-
-
-
-                                    #print(ei)
-                                    sda6=sda4
-                                        
-                                    wer=sda6
-
-                                    n = int(wer, 2)
-                                    qqwslenf=len(wer)
-                                    qqwslenf=(qqwslenf/8)*2
-                                    qqwslenf=str(qqwslenf)
-                                    qqwslenf="%0"+qqwslenf+"x"
-                                    jl=binascii.unhexlify(qqwslenf % n)
-                                    sssssw=len(jl)
-
-                                                        
-                                    Circle_times=Circle_times+1
-                                    szxzzza=""
-                                    szxzs=""
-                                    
-                                                        
                                     Circle_times2=Circle_times2+1
+                          
+                                    if  count_times4==0:
 
-                                    if Circle_times2==1:                   
+                                         n = int(wer, 2)
+                                         qqwslenf=len(wer)
+                                         qqwslenf=(qqwslenf/8)*2
+                                         qqwslenf=str(qqwslenf)
+                                         qqwslenf="%0"+qqwslenf+"x"
+                                         jl=binascii.unhexlify(qqwslenf % n)
+                                         sssssw=len(jl)
+
+                                         szxzzza=""
+                                         szxzs=""
                                             
-                                            f2.write(jl)
-                                            x2 = time()
-                                            x3=x2-x
-                                            return print(x3)
+                                         f2.write(jl)
+                                         x2 = time()
+                                         x3=x2-x
+                                         return print(x3)
                                         
                                 
   
@@ -746,7 +714,6 @@ class compression:
 
                                     count_times4=0
                                     
-
                                     while ei<lenf6:
 
                                         sda9=sda2[0:1][::-1]
@@ -764,12 +731,7 @@ class compression:
                                         else:
                                            
                                             sda4=sda4+sda10
-                                            
-                                        
-
-                                                
-
-                                        
+                                      
                                     #print(ei)
                                     sda6=sda4
                                     sda4=""
@@ -798,12 +760,6 @@ class compression:
                                         sda4=""
                                         szx=""
                                         
-                                        
-                                    
-                                        Circle_times=Circle_times+1
-                                        
-                                       
-                                                        
                                         Circle_times2=Circle_times2+1
                                         
                                     
