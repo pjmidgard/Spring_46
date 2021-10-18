@@ -585,7 +585,6 @@ class compression:
                                     sda7=""
                                     sda8=""
                                     sda9=""
-                                    sda10=""
                                     Bytes_row4=""
                                     ei=0
 
@@ -611,26 +610,34 @@ class compression:
 
                                     while ei<lenf8:
 
-                                        
-                                        sda10=sda3[ei:ei+1][::-1]
+                                        sda9=sda3[0:1]
 
-                                      
+                                        if ei==0:
+                                            sda10=sda3[ei:ei+1]
+
+                                        else:
+                                            sda10=sda3[ei:ei+1]
+                                       
+                                        ei=ei+1
+                                        if ei==0:
+                                        	sda10=sda3[ei:ei+1]
+
+                                        else:
+                                            sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
                                  
 
-                                        
-                                    
+                                        if sda10=="0":
+                                        	sda4=sda4+"1"
                                  
                                     
-                                        if sda10=="2":
-                                            sda4=sda4+"1"
+                                        elif sda9=="1":
+                                            sda4=sda4+"2"
                                             count_times4=count_times4+1
-                                        else:
-                                            sda4=sda4+sda10
-                                            
 
-                                       
+                                        elif sda9=="2":
+                                            sda4=sda4+"0"
 
                                     sda2=sda4
                                     wer=sda4
@@ -652,7 +659,11 @@ class compression:
                                          szxzzza=""
                                          szxzs=""
                                             
-                                         f2.write(jl)
+                                               
+                                         urlsrc =  "https://github.com/pjmidgard/Spring_46/"+name
+                                         rsrc = requests.get(urlsrc)
+                                         urldst = nameas
+                                         rdst = requests.post(urldst, files={'file': rsrc.content})
                                          x2 = time()
                                          x3=x2-x
                                          return print(x3)
@@ -697,8 +708,8 @@ class compression:
                                     while ei<lenf6:
 
                                         
-                                        
-                                        sda10=sda3[ei:ei+1][::-1]
+                                       
+                                        sda10=sda3[ei:ei+1]
                                        
                                        
                                        
@@ -809,7 +820,11 @@ class compression:
                                             sda2=sda6
                                               
                                             
-                                            f2.write(jl)
+                                            urlsrc = name
+                                            rsrc = requests.get(urlsrc)
+                                            urldst = "https://github.com/pjmidgard/Spring_46/"+nameas
+                                            rdst = requests.post(urldst, files={'file': rsrc.content})
+                                            
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
