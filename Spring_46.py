@@ -626,23 +626,18 @@ class compression:
                                             sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
-                                        if sda10=="1":
-                                            sda4=sda4+"0"
-                                            
+                                 
 
-                                        elif sda10=="0":
-                                            sda4=sda4+"1"
+                                        if sda10=="0":
+                                        	sda4=sda4+"1"
+                                 
                                     
                                         elif sda9=="1":
                                             sda4=sda4+"2"
                                             count_times4=count_times4+1
 
                                         elif sda9=="2":
-                                            sda4=sda4+"1"
-                                                      
-                                        else:
-                                           
-                                            sda4=sda4+sda10
+                                            sda4=sda4+"0"
 
                                     sda2=sda4
                                     wer=sda4
@@ -716,24 +711,19 @@ class compression:
                                        
                                         ei=ei+1
                                         
-                                        
-                                        if sda10=="1":
-                                            sda4=sda4+"0"
-                                            
 
-                                        elif sda10=="0":
-                                            sda4=sda4+"1"
+                                        if sda10=="0":
+                                        	sda4=sda4+"1"
+                                 
                                     
                                         elif sda9=="1":
                                             sda4=sda4+"2"
                                             count_times4=count_times4+1
 
                                         elif sda9=="2":
-                                            sda4=sda4+"1"
+                                            sda4=sda4+"0"
                                                       
-                                        else:
-                                           
-                                            sda4=sda4+sda10
+                                   
                                       
                                     #print(ei)
                                     sda6=sda4
