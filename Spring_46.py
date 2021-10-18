@@ -662,7 +662,7 @@ class compression:
 
                                     Circle_times2=Circle_times2+1
                           
-                                    if  count_times4==0:
+                                    if  Circle_times2>=lenf9 and count_times4==0:
 
                                          n = int(wer, 2)
                                          qqwslenf=len(wer)
