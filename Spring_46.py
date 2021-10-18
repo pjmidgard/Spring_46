@@ -619,8 +619,8 @@ class compression:
                                             sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
-                                               if ei==0:
-                                            sda10=sda3[ei:ei+1]
+                                        if ei==0:
+                                        	sda10=sda3[ei:ei+1]
 
                                         else:
                                             sda10=sda3[ei:ei+1]
