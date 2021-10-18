@@ -626,14 +626,12 @@ class compression:
                                             sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
-                                        
-                                        
-                                        if sda9=="0":
-                                            sda4=sda4+"3"
+                                        if sda10=="1":
+                                            sda4=sda4+"0"
                                             
 
-                                        elif sda9=="3":
-                                            sda4=sda4+"0"
+                                        elif sda10=="0":
+                                            sda4=sda4+"1"
                                     
                                         elif sda9=="1":
                                             sda4=sda4+"2"
@@ -719,12 +717,12 @@ class compression:
                                         ei=ei+1
                                         
                                         
-                                        if sda9=="0":
-                                            sda4=sda4+"3"
+                                        if sda10=="1":
+                                            sda4=sda4+"0"
                                             
 
-                                        elif sda9=="3":
-                                            sda4=sda4+"0"
+                                        elif sda10=="0":
+                                            sda4=sda4+"1"
                                     
                                         elif sda9=="1":
                                             sda4=sda4+"2"
