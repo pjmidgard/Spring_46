@@ -543,11 +543,8 @@ class compression:
                                     if lenf7>=(2**32)-1:
                                         raise SystemExit
                                         
-                                        
-                                    
-                                    
-                                
-                                    
+                                    if lenf7==0:
+                                        raise SystemExit 
                                 #########################################################################################################################################################
                                 
                                 block2=0
@@ -735,8 +732,11 @@ class compression:
                                         szx=""
                                         
                                         Circle_times2=Circle_times2+1
+
+
+                                        if  Circle_times2==(2**48)-1:
+                                            raise SystemExit
                                         
-                                    
                                         if  count_times4==lenf7*8:
                                             
 
