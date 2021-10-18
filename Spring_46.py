@@ -610,17 +610,32 @@ class compression:
 
                                     while ei<lenf8:
 
-                                        sda9=sda3[0:1][::-1]
+                                        sda9=sda3[0:1]
 
                                         if ei==0:
-                                            sda10=sda3[ei:ei+1][::-1]
+                                            sda10=sda3[ei:ei+1]
 
                                         else:
                                             sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
+                                               if ei==0:
+                                            sda10=sda3[ei:ei+1]
+
+                                        else:
+                                            sda10=sda3[ei:ei+1]
+                                       
+                                        ei=ei+1
+                                        
+                                        
+                                        if sda9=="0":
+                                            sda4=sda4+"3"
+                                            
+
+                                        elif sda9=="3":
+                                            sda4=sda4+"0"
                                     
-                                        if sda9=="1":
+                                        elif sda9=="1":
                                             sda4=sda4+"2"
                                             count_times4=count_times4+1
 
@@ -637,7 +652,7 @@ class compression:
 
                                     Circle_times2=Circle_times2+1
                                     
-                                    if  Circle_times2==lenf9 and count_times4==0:
+                                    if  Circle_times2==lenf9:
                                          #print(wer)
 
                                          n = int(wer, 2)
@@ -693,17 +708,25 @@ class compression:
                                     while ei<lenf6:
 
                                         
-                                        sda9=sda3[0:1][::-1]
+                                        sda9=sda3[0:1]
 
                                         if ei==0:
-                                            sda10=sda3[ei:ei+1][::-1]
+                                            sda10=sda3[ei:ei+1]
 
                                         else:
                                             sda10=sda3[ei:ei+1]
                                        
                                         ei=ei+1
+                                        
+                                        
+                                        if sda9=="0":
+                                            sda4=sda4+"3"
+                                            
+
+                                        elif sda9=="3":
+                                            sda4=sda4+"0"
                                     
-                                        if sda9=="1":
+                                        elif sda9=="1":
                                             sda4=sda4+"2"
                                             count_times4=count_times4+1
 
